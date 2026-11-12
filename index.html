@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+ 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+<meta charset="utf-8">
+<title>Oma 360-näkymä</title>
+<!-- Ladataan Pannellum-tyylit ja -ohjelmakoodi -->
+<link rel="stylesheet" href="https://jsdelivr.net"/>
+<script type="text/javascript" src="https://jsdelivr.net"></script>
+<style>
+        /* Määritellään 360-ikkunan koko */
+        #panorama {
+            width: 100%;
+            height: 500px;
+        }
+</style>
+</head>
+<body>
+ 
+<!-- Tähän elementtiin 360-kuva piirretään -->
+<div id="panorama"></div>
+ 
+<script>
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "mummopuisto.jpg",
+    "autoLoad": true
+});
+</script>
+ 
+</body>
+</html>
